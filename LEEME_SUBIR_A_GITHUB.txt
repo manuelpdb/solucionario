@@ -1,0 +1,31 @@
+ROBOmisión LAB — SOLUCIONARIOS DOCENTES UNIFICADOS
+
+Contenido:
+  docentes.html
+
+INSTRUCCIONES PARA GITHUB PAGES
+1. Coloca el archivo HTML en la raíz del repositorio robomision-lab.
+2. Publica los cambios. La página aparecerá en:
+   https://manuelpdb.github.io/robomision-lab/docentes.html
+3. Introduce la contraseña acordada en privado (NO está incluida en el archivo subido).
+4. Para obtener los bloques se necesita Internet, ya que se dibujan con MakeCode.
+
+PRIVACIDAD
+El archivo contiene las 48 soluciones Maqueen y las 156 propuestas TA647 cifradas
+con AES-256-GCM y PBKDF2-SHA256. No hay TS, JSON ni fotos con
+soluciones en claro fuera del contenido cifrado.
+El fichero se puede publicar en un hosting estático. La contraseña es compartida:
+NO es una autenticación con cuentas; tampoco evita que usuarios autorizados
+copien o compartan el material. Escoge contraseñas largas si necesitas más seguridad.
+Si ya publicaste un solucionario anterior en texto claro, bórralo por separado:
+esta web no lo elimina ni impide que el contenido anterior pueda persistir en
+el historial de Git.
+
+AVISO PEDAGÓGICO
+Las soluciones son propuestas orientativas de apoyo al profesorado.
+No están verificadas exhaustivamente en MakeCode ni con todo el hardware real.
+En particular, las propuestas para OLED, LCD, color y presión son prototipos
+basados en la micro:bit, no controladores funcionales de los módulos I2C.
+Comprueba siempre el programa, el cableado y la alimentación antes de usarlas.
+
+Esta actualización es independiente: no altera la web pública del alumnado.
