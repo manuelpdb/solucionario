@@ -1,0 +1,30 @@
+ROBOmisión LAB · WEB DOCENTE UNIFICADA (VERSIÓN CORREGIDA)
+
+ARCHIVOS OBLIGATORIOS
+  docentes.html                  (página y menú, aprox. 27 KB)
+  docentes-datos.enc.json        (solucionarios cifrados, aprox. 10 MB)
+
+PARA PUBLICAR EN GITHUB PAGES
+1. Descarga y descomprime este ZIP en tu ordenador.
+2. Abre el repositorio de RoboMisión LAB en GitHub.
+3. Sube AMBOS archivos a la raíz del repositorio, junto a index.html.
+   - Si ya existe docentes.html, confirma su sustitución.
+   - Comprueba que el nombre sea exactamente docentes-datos.enc.json.
+4. Confirma los cambios (Commit changes) y espera a que GitHub Pages
+   publique la nueva versión.
+5. Abre https://manuelpdb.github.io/robomision-lab/docentes.html
+   y escribe la contraseña acordada por separado.
+6. Si hay caché, prueba Ctrl+F5 o una pestaña de incógnito.
+
+COMPROBACIÓN MÁS FÁCIL
+Abre https://manuelpdb.github.io/robomision-lab/docentes-datos.enc.json
+Si recibes 404, el archivo cifrado NO se ha publicado en la ruta correcta.
+Si se ve un JSON cifrado, ese archivo sí está accesible (no muestra soluciones).
+Si la página docentes.html da 404, el HTML no está publicado en la raíz.
+
+IMPORTANTE
+La web del alumnado NO se sustituye ni se modifica con este ZIP.
+Los materiales docentes permanecen cifrados mediante AES-256-GCM, derivación
+PBKDF2-SHA256. La contraseña es compartida, no una gestión de usuarios.
+Los bloques se representan por el servicio oficial MakeCode y necesitan
+Internet. Las soluciones siguen siendo orientativas sin validación exhaustiva.
