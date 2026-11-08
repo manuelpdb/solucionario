@@ -1,0 +1,156 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="color-scheme" content="light"><title>RoboMisión LAB · Solucionarios docentes</title><style>
+:root{--navy:#152441;--navy2:#183e51;--teal:#3cdbc5;--teal-deep:#0c8e88;--peach:#ffca9c;--ink:#172a45;--muted:#5b6f84;--line:#dbe6ee;--paper:#f3f7fb;--white:#fff;--shadow:0 15px 35px rgba(18,38,71,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:15px/1.56 system-ui,-apple-system,'Segoe UI',Arial,sans-serif;color:var(--ink);background:var(--paper)}
+button,input,select{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}img{max-width:100%}[hidden]{display:none!important}
+.wrap{width:min(1200px,calc(100% - 36px));margin-inline:auto}
+.topbar{background:linear-gradient(100deg,var(--navy) 35%,var(--navy2));color:white;border-bottom:2px solid #284d61;position:sticky;z-index:20;top:0}
+.topbar .inner{min-height:86px;display:flex;align-items:center;gap:15px;flex-wrap:wrap;padding:13px 0}
+.menu-wrapper{position:relative}.menu-button{padding:12px 16px;background:var(--peach);color:#1b304d;font-weight:800;border:0;border-radius:15px;box-shadow:0 4px 0 #c8966d;white-space:nowrap}
+.menu-button:hover{filter:brightness(.98)}.primary-nav{display:flex;align-items:center;gap:2px;flex-wrap:wrap}.navlink{border:0;background:transparent;color:#e8f0f9;border-radius:14px;padding:12px 14px;font-weight:800;font-size:15px;white-space:nowrap}.navlink:hover{background:rgba(255,255,255,.12)}.navlink.active{background:var(--teal);color:#102a42}
+.brand{margin-left:auto;display:flex;align-items:center;font-weight:900;font-size:19px;letter-spacing:-.05em;white-space:nowrap;gap:9px}.brand .robot{display:grid;place-items:center;border:1px solid #67a9be;padding:6px;border-radius:12px;background:#16344f;font-size:23px}.brand b{padding:4px 8px;background:var(--teal);color:#103245;border-radius:9px;letter-spacing:1px;font-size:11px}
+.menu-dropdown{position:absolute;z-index:50;top:calc(100% + 10px);left:0;background:white;color:var(--ink);min-width:255px;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:8px;display:grid;gap:3px}.menu-dropdown button,.menu-dropdown a{display:block;width:100%;text-align:left;border:0;background:transparent;color:var(--ink);padding:11px 12px;border-radius:10px;font-weight:700}.menu-dropdown button:hover,.menu-dropdown a:hover{background:#e7f7f5}
+.hero{background:white;border:1px solid var(--line);border-radius:24px;padding:28px 32px;margin:25px 0 18px;box-shadow:var(--shadow)}.hero.soft{background:linear-gradient(120deg,#fff 60%,#ecfaf8)}.eyebrow{font-size:11px;font-weight:900;letter-spacing:.15em;color:#00877c;text-transform:uppercase}.hero h1{font-size:clamp(26px,4vw,42px);line-height:1.13;letter-spacing:-.035em;margin:8px 0}.hero p{color:var(--muted);max-width:890px;margin:9px 0}
+.alert{background:#fffaf0;color:#674b27;border:1px solid #edd5a2;border-left:5px solid #e3a84e;border-radius:15px;margin:14px 0 24px;padding:15px 18px}.alert strong{color:#64441a}.alert p{margin:5px 0 0}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:20px 0 24px}.stat{background:#fff;border:1px solid var(--line);border-radius:17px;padding:18px 20px}.stat strong{font-size:26px;color:#0f7e7c;display:block;font-weight:900;line-height:1.1}.stat span{display:block;font-size:13px;color:var(--muted);margin-top:5px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(245px,1fr));gap:15px;margin:18px 0}.card{background:white;border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 8px 20px #203d5d08}.card h3{font-size:18px;line-height:1.26;margin:5px 0 8px}.card p{color:var(--muted);font-size:13px;margin:7px 0 15px}.card .card-foot{display:flex;justify-content:space-between;align-items:center;gap:6px}
+.card.module-card{display:grid;grid-template-columns:92px 1fr;align-items:center;gap:13px;padding:15px}.module-card img{width:92px;height:88px;object-fit:contain;border:1px solid #e4ecf1;border-radius:12px;background:#fff;padding:7px}.module-card h3{font-size:15px}.module-card p{margin:4px 0;font-size:12px}.card:hover{border-color:#b2dcd6}
+.btn{background:white;color:#185c6d;border:1px solid #b8d2db;border-radius:12px;padding:10px 14px;font-weight:800;font-size:13px;display:inline-flex;align-items:center;justify-content:center;gap:7px;cursor:pointer}.btn:hover{background:#e9f7f6}.btn.primary{background:#137e81;border-color:#137e81;color:white}.btn.primary:hover{background:#0e686b}.btn:disabled{opacity:.5;cursor:wait}
+.toolbar{display:flex;gap:11px;align-items:center;flex-wrap:wrap;margin:16px 0}.toolbar input,.toolbar select,.login input{background:white;border:1px solid #c6d5e1;border-radius:12px;padding:11px 13px;min-height:44px;color:var(--ink)}.toolbar input{width:min(350px,100%)}.toolbar label{font-size:13px;font-weight:800}.muted{color:var(--muted)}.small{font-size:12px}.section-title{margin:25px 0 12px;font-size:23px;letter-spacing:-.02em}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.pill{display:inline-block;border-radius:999px;background:#e3f6f3;color:#076f68;padding:5px 9px;font-size:11px;font-weight:900;white-space:nowrap}.pill.PRO{background:#fff0da;color:#8b5900}.pill.PLATA,.pill.INTERMEDIO{background:#e9efff;color:#3857a3}.pill.BRONCE,.pill.INICIAL{background:#e2f5ef;color:#097b67}
+.panel{background:white;border:1px solid var(--line);border-radius:20px;padding:23px;margin:16px 0}.panel h2,.panel h3{margin:0 0 12px}.back{margin:18px 0 8px}.detail-head{display:grid;grid-template-columns:144px 1fr;gap:20px;align-items:center}.detail-head img{width:144px;height:144px;object-fit:contain;border-radius:14px;border:1px solid var(--line);padding:12px}.detail-head h1{font-size:28px;margin:5px 0}.detail-head p{color:var(--muted);margin:0}
+.scheme{display:block;max-height:590px;max-width:100%;width:auto;object-fit:contain;margin:12px auto;border:1px solid var(--line);border-radius:10px}.connection p{margin:8px 0}
+.exercises{display:grid;gap:12px}.exercise{background:white;border:1px solid var(--line);border-radius:17px;overflow:hidden}.exercise>summary{cursor:pointer;display:flex;gap:11px;align-items:center;padding:17px;font-weight:800;list-style:none}.exercise>summary::-webkit-details-marker{display:none}.exercise[open]>summary{background:#f8fcfd;border-bottom:1px solid var(--line)}.exercise>summary::after{content:'⌄';margin-left:auto;color:#377f83}.exercise[open]>summary::after{content:'⌃'}.exercise .body{padding:20px}.objective{background:#f0f8fc;border-radius:12px;padding:13px;margin:0 0 12px}.exercise h4{margin:19px 0 8px;font-size:16px}.exercise ol{padding-left:21px}.exercise li{margin:7px 0}
+.codepreview{background:#12233b;color:#e4f0ff;white-space:pre-wrap;overflow:auto;max-height:420px;border-radius:12px;padding:16px;font:12px/1.6 Consolas,monospace}.codefold{margin-top:10px}.codefold summary{cursor:pointer;color:#175a6d;font-weight:700;font-size:13px}.blocks{background:#f5f9fc;border:1px solid var(--line);border-radius:13px;padding:14px;overflow:auto;min-height:56px;margin-top:11px}.blocks img{display:block;max-width:none;height:auto;max-height:none;margin:0 auto}.blocks-status{font-size:13px;color:#52697b;margin:2px}.blocks-status.bad{color:#ab3d32}.subnote{font-size:12px;color:var(--muted);margin:8px 0}.actions{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.login{width:min(515px,100%);margin:8vh auto 7vh;background:white;padding:31px;border-radius:24px;border:1px solid var(--line);box-shadow:0 18px 45px rgba(18,38,71,.1)}.login h1{font-size:29px;line-height:1.2;margin:9px 0}.login p{color:var(--muted)}.login label{display:block;font-weight:800;margin:19px 0 8px}.login input{width:100%}.login .btn{width:100%;margin-top:15px;padding:13px}.err{color:#b33c33;font-size:13px;min-height:20px;margin:10px 0}.footer{color:var(--muted);font-size:13px;padding:32px 0 35px}.footline{border-top:1px solid var(--line);margin-top:30px}
+@media(max-width:900px){.brand{font-size:16px}.topbar .inner{gap:9px}.navlink{padding:10px 9px;font-size:13px}}
+@media(max-width:670px){.topbar .inner{min-height:70px;justify-content:space-between}.primary-nav{order:3;width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:thin}.brand{font-size:14px}.brand .robot{display:none}.navlink{padding:9px 10px}.hero{padding:22px}.stats{grid-template-columns:1fr}.detail-head{grid-template-columns:85px 1fr}.detail-head img{width:85px;height:85px}.card.module-card{grid-template-columns:76px 1fr}.module-card img{width:76px;height:78px}.exercise .body{padding:14px}.login{margin:4vh auto}}
+@media print{.topbar,.btn,.actions,.toolbar,.login,.footer{display:none!important}body{background:white}.exercise .body{display:block!important}.blocks{page-break-inside:avoid}}
+</style></head>
+<body><header class="topbar"><div class="wrap inner"><div class="menu-wrapper"><button class="menu-button" id="menu-btn" aria-expanded="false" aria-controls="menu-list">☰&nbsp; Menú</button><div id="menu-list" class="menu-dropdown" hidden><button data-nav="inicio">⌂ &nbsp; Inicio docente</button><button data-nav="maqueen">🤖 &nbsp; Maqueen Plus V2</button><button data-nav="ta647">🔌 &nbsp; Sensores TA647</button><a target="_blank" rel="noopener noreferrer" href="https://manuelpdb.github.io/robomision-lab/">↗ &nbsp; Web del alumnado</a><button id="logout" type="button">🔒 &nbsp; Cerrar sesión</button></div></div><nav class="primary-nav" aria-label="Secciones docentes"><a class="navlink active" href="#inicio" data-nav="inicio">Inicio</a><a class="navlink" href="#maqueen" data-nav="maqueen">Maqueen Plus</a><a class="navlink" href="#ta647" data-nav="ta647">Sensores TA647</a></nav><div class="brand"><span class="robot" aria-hidden="true">🤖</span><span>RoboMisión</span><b>LAB</b></div></div></header>
+<main class="wrap"><section id="login-view"><div class="login"><div class="eyebrow">ACCESO DOCENTE</div><h1>Solucionarios de RoboMisión LAB</h1><p>Un único espacio para consultar las propuestas de Maqueen Plus V2 y del kit TA647.</p><form id="login-form"><label for="password">Contraseña de acceso</label><input id="password" name="password" type="password" autocomplete="current-password" required placeholder="Introduce la contraseña"><button id="unlock" class="btn primary" type="submit">🔓 Entrar en el espacio docente</button><div id="error" class="err" aria-live="polite" role="status"></div></form><p class="small muted">Los solucionarios están cifrados y se cargan al introducir la contraseña. Debes publicar ambos archivos del ZIP. Los bloques gráficos requieren conexión a Internet con MakeCode.</p></div></section>
+<div id="site-view" hidden><div id="app"></div></div></main><footer class="wrap footer"><div class="footline"></div>RoboMisión LAB · Material orientativo de apoyo docente. Contrasta las propuestas antes de utilizarlas en el aula.</footer>
+<script>
+'use strict';
+(() => {
+const $=(q,root=document)=>root.querySelector(q);
+const $$=(q,root=document)=>[...root.querySelectorAll(q)];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const PXT='https://makecode.microbit.org';
+const EXT='maqueenPlusV2=github:DFRobot/pxt-DFRobot_MaqueenPlus_v20';
+let db=null, unlocked=false, selected={page:'inicio',id:''};
+const codeIndex=new Map();let codeSeq=0;
+const k=code=>{const id='prog-'+(++codeSeq);codeIndex.set(id,code);return id};
+const pageLabels={inicio:'Inicio',maqueen:'Maqueen Plus',ta647:'Sensores TA647'};
+function setMenu(open){$('#menu-list').hidden=!open;$('#menu-btn').setAttribute('aria-expanded',String(open));}
+$('#menu-btn').addEventListener('click',()=>setMenu($('#menu-list').hidden));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
+document.addEventListener('click',e=>{if(!e.target.closest('.menu-wrapper'))setMenu(false)});
+$$('[data-nav]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();setMenu(false);if(!unlocked){$('#password').focus();return;} navigate(el.dataset.nav)}));
+function currentRoute(){const raw=decodeURIComponent(location.hash.slice(1)||'inicio');if(raw.startsWith('maqueen/'))return {page:'maqueen',id:raw.split('/')[1]};if(raw.startsWith('ta647/'))return {page:'ta647',id:raw.split('/')[1]};if(['inicio','maqueen','ta647'].includes(raw))return {page:raw,id:''};return {page:'inicio',id:''};}
+function navigate(page,id=''){const h='#'+page+(id?'/'+encodeURIComponent(id):'');if(location.hash===h){selected={page,id};render();window.scrollTo(0,0);}else location.hash=h;}
+window.addEventListener('hashchange',()=>{if(unlocked){selected=currentRoute();render();window.scrollTo(0,0);}});
+function navActive(){const p=selected.page;$$('.navlink[data-nav]').forEach(x=>{x.classList.toggle('active',x.dataset.nav===p);if(x.dataset.nav===p)x.setAttribute('aria-current','page');else x.removeAttribute('aria-current')});}
+function notice(){return `<aside class="alert" role="note"><strong>Importante · Material de apoyo docente</strong><p>${esc(db.disclaimer)}</p></aside>`}
+function box(title,body,additional=''){return `<section class="panel ${additional}"><h2>${esc(title)}</h2>${body}</section>`}
+function render(){codeIndex.clear();codeSeq=0;const root=$('#app');if(!root||!db)return;
+ navActive();if(selected.page==='inicio')root.innerHTML=renderHome();
+ else if(selected.page==='maqueen')root.innerHTML=selected.id?renderMission(selected.id):renderMaqueen();
+ else root.innerHTML=selected.id?renderModule(selected.id):renderTA();
+ bindControls();
+}
+function renderHome(){return `<section class="hero soft"><div class="eyebrow">ROBOmisión LAB · Espacio docente</div><h1>Solucionarios para preparar tus clases</h1><p>Maqueen Plus V2 y kit de sensores TA647 reunidos en un único espacio. Busca una misión, revisa los programas y consulta las conexiones.</p></section>${notice()}
+<div class="stats"><div class="stat"><strong>16</strong><span>Misiones de Maqueen Plus V2</span></div><div class="stat"><strong>48</strong><span>Soluciones de retos Maqueen</span></div><div class="stat"><strong>156</strong><span>Propuestas TA647 para 26 componentes</span></div></div>
+<div class="cards"><div class="card"><span class="pill">Robótica</span><h3>Maqueen Plus V2</h3><p>16 misiones, cada una con soluciones Bronce, Plata y PRO. Incluye segundos programas cuando se utilizan dos robots.</p><button class="btn primary" data-action="nav" data-page="maqueen">Entrar en Maqueen Plus</button></div><div class="card"><span class="pill">Sensores y actuadores</span><h3>Kit de sensores TA647</h3><p>26 componentes, 156 actividades con fotos, esquemas oficiales y programas de apoyo.</p><button class="btn primary" data-action="nav" data-page="ta647">Entrar en sensores TA647</button></div></div>
+<p class="subnote">La visualización gráfica de los bloques necesita conexión a Internet con Microsoft MakeCode. Cuando no se pueda mostrar, estará disponible el programa de apoyo para su revisión.</p>`}
+function getMissions(){const groups=new Map();for(const m of db.maqueen){if(!groups.has(m.missionId))groups.set(m.missionId,{id:m.missionId,title:m.missionTitle,items:[]});groups.get(m.missionId).items.push(m)}return [...groups.values()];}
+function renderMaqueen(){return `<section class="hero"><div class="eyebrow">Solucionario docente · Maqueen Plus V2</div><h1>16 misiones · 48 soluciones</h1><p>Consulta las propuestas de los retos Bronce, Plata y PRO, incluidas las variantes para dos robots cuando corresponda.</p></section>${notice()}
+<div class="toolbar"><input id="search-maqueen" placeholder="Buscar misión o reto…" type="search" aria-label="Buscar misión Maqueen"><span id="count-maqueen" class="muted small">16 misiones</span></div>
+<div class="cards" id="mission-cards">${getMissions().map(m=>missionCard(m)).join('')}</div>`}
+function missionCard(m){return `<article class="card mission-card" data-search="${esc((m.id+' '+m.title+' '+m.items.map(a=>a.title).join(' ')).toLowerCase())}"><span class="pill">MISIÓN ${esc(m.id)}</span><h3>${esc(m.title)}</h3><p>Bronce · Plata · PRO</p><button class="btn primary" data-action="nav" data-page="maqueen" data-id="${esc(m.id)}">Ver las tres soluciones</button></article>`}
+function renderMission(id){const m=getMissions().find(m=>m.id===id);if(!m)return `<p>No se ha encontrado esta misión.</p><button class="btn" data-action="nav" data-page="maqueen">Volver</button>`;
+return `<div class="back"><button class="btn" data-action="nav" data-page="maqueen">← Todas las misiones</button></div><section class="hero"><div class="eyebrow">MAQUEEN PLUS V2 · MISIÓN ${esc(m.id)}</div><h1>${esc(m.title)}</h1><p>Tres niveles de reto. Revisa la propuesta de solución y las observaciones de comprobación.</p></section>${notice()}
+<div class="exercises">${m.items.map((a,i)=>missionExercise(a,i===0)).join('')}</div>`}
+function missionExercise(a,open){const code1=k({code:a.code,kind:'maqueen',id:a.id});const program=makeProgram(code1, 'Programa de solución',a.id);
+ const code2=a.other?k({code:a.other,kind:(a.mission===14?'microbit':'maqueen'),id:a.id+'-SEGUNDO'}):'';
+ return `<details class="exercise" ${open?'open':''}><summary><span class="pill ${esc(a.level)}">${esc(a.level)}</span><span>${esc(a.title)}</span></summary><div class="body"><p class="objective"><strong>Orientaciones para comprobarlo:</strong> ${esc(a.note)}</p>${program}${code2?makeProgram(code2,'Programa para la segunda micro:bit / robot',a.id+'-SEGUNDO'):''}</div></details>`}
+function renderTA(){return `<section class="hero"><div class="eyebrow">Solucionario docente · Sensores TA647</div><h1>26 componentes · 156 actividades</h1><p>Fotografías, esquemas oficiales de conexión y seis propuestas por componente (Inicial, Intermedio y PRO).</p></section>${notice()}
+<div class="toolbar"><input id="search-ta647" placeholder="Buscar componente…" type="search" aria-label="Buscar un componente"><span class="muted small" id="count-ta647">26 componentes</span></div><div class="cards" id="module-cards">${db.modules.map((m,i)=>moduleCard(m,i)).join('')}</div>`}
+function moduleCard(m,i){return `<article class="card module-card" data-search="${esc((m.name+' '+m.intro).toLowerCase())}"><img src="${m.image}" loading="lazy" alt="${esc(m.name)}"><div><span class="pill">FICHA ${String(i+1).padStart(2,'0')}</span><h3>${esc(m.name)}</h3><p>${esc(m.intro)}</p><button class="btn primary" data-action="nav" data-page="ta647" data-id="${esc(m.id)}">Ver soluciones</button></div></article>`}
+function renderModule(id){const m=db.modules.find(m=>m.id===id);if(!m)return `<p>Componente no encontrado.</p><button class="btn" data-action="nav" data-page="ta647">Volver</button>`;
+ const proto=['oled','lcd','color','presion'].includes(id);
+ return `<div class="back"><button class="btn" data-action="nav" data-page="ta647">← Todos los componentes</button></div><section class="panel detail-head"><img src="${m.image}" alt="${esc(m.name)}"><div><div class="eyebrow">KIT TA647 · Solucionario docente</div><h1>${esc(m.name)}</h1><p>${esc(m.intro)}</p><div class="row"><span class="pill">6 actividades</span><span class="pill">Inicial · Intermedio · PRO</span></div></div></section>${notice()}
+ ${proto?`<aside class="alert"><strong>Advertencia sobre este componente I2C</strong><p>Los programas propuestos son prototipos realizados con la micro:bit: no leen ni controlan directamente este módulo externo sin la extensión o el controlador correspondiente.</p></aside>`:''}
+ ${box('Conexión y precauciones',`<div class="connection">${m.connection.map(p=>`<p>${esc(p)}</p>`).join('')||'<p>Comprueba las conexiones antes de conectar la alimentación.</p>'}</div>${m.scheme?`<img class="scheme" src="${m.scheme}" alt="Esquema oficial de conexión de ${esc(m.name)}">`:''}`)}
+ <h2 class="section-title">Seis actividades resueltas</h2><div class="exercises">${m.activities.map((a,i)=>sensorExercise(m,a,i===0)).join('')}</div>`}
+function sensorExercise(module,a,open){const key=a.code?k({code:a.code,kind:'microbit',id:'TA-'+module.id+'-'+a.n}):null;
+return `<details class="exercise" ${open?'open':''}><summary><span class="pill">${String(a.n).padStart(2,'0')}</span><span class="pill ${esc(a.level)}">${esc(a.level)}</span><span>${esc(a.title)}</span></summary><div class="body"><p class="objective"><strong>Objetivo del alumnado:</strong> ${esc(a.objective)}</p>${key?makeProgram(key,'Bloques de la solución','TA-'+module.id+'-'+a.n):'<p class="subnote">Esta actividad es de montaje y comprobación; no necesita programación.</p>'}
+<h4>Comprobaciones docentes</h4><ol>${a.steps.map(s=>`<li>${esc(s)}</li>`).join('')}</ol></div></details>`}
+function makeProgram(key,title,filename){return `<div class="program"><h4>🧩 ${esc(title)}</h4><div class="actions"><button class="btn primary" data-action="blocks" data-key="${esc(key)}">Ver bloques de MakeCode</button><button class="btn" data-action="copy" data-key="${esc(key)}">Copiar programa</button><button class="btn" data-action="download" data-key="${esc(key)}" data-filename="${esc(filename)}">Descargar .ts</button><a href="${PXT}/?lang=es-ES" rel="noopener noreferrer" target="_blank" class="btn">Abrir MakeCode ↗</a></div><div class="blocks" id="blocks-${key}"><p class="blocks-status">Pulsa «Ver bloques» para solicitar el programa completo a MakeCode.</p></div>
+<details class="codefold"><summary>Ver código de apoyo por si la conversión de bloques falla</summary><pre class="codepreview">${esc(codeIndex.get(key)?.code)}</pre></details><p class="subnote">MakeCode dibuja los bloques al pulsar el botón. El código es una propuesta pendiente de validación y puede necesitar ajustes.</p></div>`}
+function bindControls(){const searchM=$('#search-maqueen'),searchT=$('#search-ta647');if(searchM)searchM.addEventListener('input',()=>filterCards('#mission-cards','.mission-card',searchM.value,'#count-maqueen','misiones'));if(searchT)searchT.addEventListener('input',()=>filterCards('#module-cards','.module-card',searchT.value,'#count-ta647','componentes'));
+ $$('[data-action="nav"]', $('#app')).forEach(x=>x.addEventListener('click',()=>navigate(x.dataset.page,x.dataset.id||'')));
+ $$('[data-action="blocks"]', $('#app')).forEach(x=>x.addEventListener('click',()=>{const obj=codeIndex.get(x.dataset.key);if(obj)renderer.enqueue($('#blocks-'+x.dataset.key),x,obj)}));
+ $$('[data-action="copy"]', $('#app')).forEach(x=>x.addEventListener('click',async()=>{const obj=codeIndex.get(x.dataset.key);if(!obj)return;try{await navigator.clipboard.writeText(obj.code);x.textContent='✓ Copiado';}catch(err){const pre=x.closest('.program')?.querySelector('pre');if(pre){pre.closest('details').open=true;x.textContent='Copia el código visible';}}}));
+ $$('[data-action="download"]', $('#app')).forEach(x=>x.addEventListener('click',()=>{const obj=codeIndex.get(x.dataset.key);if(!obj)return;const data=new Blob([obj.code],{type:'text/plain;charset=utf-8'});const u=URL.createObjectURL(data);const a=document.createElement('a');a.href=u;a.download=(x.dataset.filename||'programa').replace(/[^a-zA-Z0-9_-]/g,'-')+'.ts';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}));
+}
+function filterCards(root,selector,query,count,label){const q=query.trim().toLocaleLowerCase('es');const nodes=$$(selector,$(root));let visible=0;for(const c of nodes){const match=!q||c.dataset.search.includes(q);c.hidden=!match;if(match)visible++}$(count).textContent=visible+' '+label;}
+const renderer=(()=>{
+let frame=null,ready=false,busy=null,seq=0,timer=null,initTimeout=null;const queue=[];const cache=new Map();
+function show(host,txt,bad=false){if(!host?.isConnected)return;host.innerHTML='<p class="blocks-status'+(bad?' bad':'')+'">'+esc(txt)+'</p>';}
+function init(){if(frame)return;
+ frame=document.createElement('iframe');frame.title='Servicio oficial de MakeCode para dibujar bloques';frame.setAttribute('aria-hidden','true');frame.tabIndex=-1;frame.style.cssText='position:fixed;left:0;top:0;width:1px;height:1px;border:0;opacity:0;pointer-events:none';frame.src=PXT+'/--docs?render=1&lang=es-ES';document.body.append(frame);
+ initTimeout=setTimeout(()=>{if(!ready){const jobs=[...queue.splice(0)];if(busy){jobs.push(busy);busy=null;}for(const j of jobs){show(j.host,'No se pudo conectar con MakeCode. Puedes consultar el código y volver a intentarlo.',true);j.btn.disabled=false}reset();}},26000);
+}
+function reset(){clearTimeout(timer);clearTimeout(initTimeout);frame?.remove();frame=null;ready=false;busy=null;timer=null;initTimeout=null;}
+function pump(){if(!ready||busy)return;while(queue.length){const j=queue.shift();if(!j.host?.isConnected){j.btn.disabled=false;continue;}busy=j;break;}if(!busy)return;
+ const j=busy;show(j.host,'Generando bloques completos en MakeCode…');const options={snippetMode:false};if(j.obj.kind==='maqueen')options.package=EXT;
+ try{frame.contentWindow.postMessage({type:'renderblocks',id:j.id,code:j.obj.code,options},PXT)}catch(e){complete(null,'No se pudo enviar el programa a MakeCode.');return;}
+ timer=setTimeout(()=>complete(null,'MakeCode ha tardado demasiado. Prueba otra vez o usa el código de apoyo.'),30000);
+}
+function complete(uri,error){clearTimeout(timer);const j=busy;busy=null;if(j){j.btn.disabled=false;if(uri){cache.set(j.obj.kind+'::'+j.obj.code,uri);const img=document.createElement('img');img.src=uri;img.alt='Programa completo representado con bloques de Microsoft MakeCode';img.onerror=()=>show(j.host,'No se ha podido cargar la imagen de bloques.',true);j.host.replaceChildren(img)}else show(j.host,error||'No se pudieron generar bloques.',true)}pump();}
+window.addEventListener('message',e=>{
+ if(!frame||e.origin!==PXT||e.source!==frame.contentWindow)return;const msg=e.data||{};if(msg.source!=='makecode')return;
+ if(msg.type==='renderready'){ready=true;clearTimeout(initTimeout);pump();return;}
+ if(msg.type!=='renderblocks'||!busy||msg.id!==busy.id)return;
+ if(msg.error){complete(null,'MakeCode no pudo convertir este programa. Comprueba la extensión y revisa el código de apoyo.');return;}
+ let url='';if(typeof msg.uri==='string'&&msg.uri.startsWith('data:image/'))url=msg.uri;
+ else if(typeof msg.svg==='string'&&msg.svg.includes('<svg')){const svg=msg.svg.slice(msg.svg.indexOf('<svg'));url='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg)}
+ if(url)complete(url);else complete(null,'MakeCode no devolvió bloques gráficos. Utiliza el código de apoyo para revisarlo en el editor.');
+});
+function enqueue(host,btn,obj){if(!host)return;const cacheKey=obj.kind+'::'+obj.code;const remembered=cache.get(cacheKey);if(remembered){const img=document.createElement('img');img.src=remembered;img.alt='Programa MakeCode';host.replaceChildren(img);return;}
+ if(!navigator.onLine){show(host,'Sin conexión: la generación de bloques requiere acceso a MakeCode.',true);return;}
+ btn.disabled=true;show(host,'Conectando con MakeCode…');queue.push({host,btn,obj,id:'prof-'+(++seq)});
+ if(!frame)init();pump();}
+return {enqueue};})();
+function bytesB64(text){const raw=atob(text);const arr=new Uint8Array(raw.length);for(let i=0;i<raw.length;i++)arr[i]=raw.charCodeAt(i);return arr;}
+let loadedProtectedData=null;
+async function loadProtectedData(){
+ if(loadedProtectedData)return loadedProtectedData;
+ let response;
+ try{response=await fetch('./docentes-datos.enc.json',{cache:'no-store'});}
+ catch(error){throw new Error('No se pudo cargar el archivo de datos cifrados. Abre la web desde GitHub Pages (https://) y comprueba la conexión.');}
+ if(!response.ok)throw new Error('No se encuentra docentes-datos.enc.json (error HTTP '+response.status+'). Debes subir los DOS archivos del ZIP a la misma carpeta de GitHub.');
+ let data;
+ try{data=await response.json()}catch(error){throw new Error('El archivo docentes-datos.enc.json no es válido. Vuelve a subirlo a GitHub.');}
+ if(!data||!data.salt||!data.iv||!data.data||!data.iterations)throw new Error('El archivo de datos cifrados está incompleto.');
+ loadedProtectedData=data;
+ return data;
+}
+async function decrypt(pwd){const crypt=await loadProtectedData();
+ const km=await crypto.subtle.importKey('raw',new TextEncoder().encode(pwd),'PBKDF2',false,['deriveKey']);
+ const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:bytesB64(crypt.salt),iterations:crypt.iterations,hash:'SHA-256'},km,{name:'AES-GCM',length:256},false,['decrypt']);
+ const cipher=bytesB64(crypt.data);const decipher=await crypto.subtle.decrypt({name:'AES-GCM',iv:bytesB64(crypt.iv)},key,cipher);
+ const d=new DecompressionStream('gzip');const stream=new Blob([decipher]).stream().pipeThrough(d);const plain=await new Response(stream).text();return JSON.parse(plain);
+}
+$('#login-form').addEventListener('submit',async e=>{
+ e.preventDefault();const pwd=$('#password').value.trim().toUpperCase(),btn=$('#unlock'),msg=$('#error');msg.textContent='Comprobando la contraseña y abriendo los materiales…';msg.className='muted small';btn.disabled=true;
+ try{if(!crypto?.subtle||typeof DecompressionStream==='undefined')throw new Error('Para abrir esta web necesitas un navegador actualizado y acceso mediante HTTPS.');
+ db=await decrypt(pwd);if(!Array.isArray(db.maqueen)||db.maqueen.length!==48||!Array.isArray(db.modules)||db.modules.length!==26)throw new Error('El contenido protegido está incompleto.');
+ unlocked=true;$('#password').value='';$('#login-view').hidden=true;$('#site-view').hidden=false;selected=currentRoute();render();window.scrollTo(0,0);
+ }catch(err){msg.textContent=err.name==='OperationError'?'Contraseña incorrecta. Compruébala e inténtalo de nuevo.':(err.message||'No se pudo abrir el material.');msg.className='err';}
+ finally{btn.disabled=false;}
+});
+$('#logout').addEventListener('click',()=>{db=null;codeIndex.clear();unlocked=false;$('#app').innerHTML='';$('#site-view').hidden=true;$('#login-view').hidden=false;location.hash='inicio';$('#password').focus();setMenu(false);});
+$('#password').focus();
+})();
+</script></body></html>
