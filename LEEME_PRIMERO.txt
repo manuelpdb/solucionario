@@ -34,3 +34,13 @@ IMPORTANTE:
   - Se precisa un navegador reciente con HTTPS para el descifrado.
   - El código y las soluciones son orientativos y NO están todos verificados.
   - No subas los ZIP antiguos con las soluciones sin cifrar.
+
+
+CORRECCIÓN DEL VISOR DE BLOQUES (8 NOVIEMBRE 2026)
+----------------------------------------------------
+Las imágenes SVG creadas por MakeCode ahora se adaptan al ancho de pantalla
+(máximo 760 píxeles en escritorio), manteniendo sus proporciones y sin
+recortar ninguna parte del programa. Solo se ha cambiado el estilo visual;
+las 204 propuestas y la contraseña CEPDEJEREZ siguen intactas.
+Para ver la versión nueva, sustituye los archivos de la raíz del repositorio
+'solucionario' y fuerza la recarga con Ctrl + F5.
