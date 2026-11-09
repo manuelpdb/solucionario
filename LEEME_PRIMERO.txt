@@ -1,46 +1,23 @@
-ROBOMISIÓN LAB — SOLUCIONARIO DOCENTE — LISTO PARA GITHUB PAGES
-=============================================================
+ROBOMISIÓN LAB · SOLUCIONARIOS DOCENTES CON PROYECTOS STEAM
 
-ESTE ZIP ES PARA EL REPOSITORIO PUBLICO "solucionario" (NO PARA "robomision-lab").
+VERSIÓN PARA PUBLICAR EN GITHUB PAGES - repositorio «solucionario»
 
-ARCHIVOS QUE DEBES SUBIR A LA RAÍZ DEL REPOSITORIO:
-  index.html                  Página principal, imprescindible para abrir la raíz
-  docentes.html               Misma web, compatible con la dirección anterior
-  docentes-datos.enc.json     Solucionarios cifrados (obligatorio, ~10 MB)
-  .nojekyll                   Evita procesamientos Jekyll de GitHub Pages
-  404.html                    Página de error amigable
-  LEEME_PRIMERO.txt           Estas instrucciones
+Este ZIP es completo. Sustituye en la RAÍZ del repositorio los archivos
+index.html, docentes.html, docentes-datos.enc.json, 404.html, .nojekyll
+(y este LEEME si lo deseas). No publiques otros solucionarios sin cifrar.
 
-PASOS:
-  1. Descarga y DESCOMPRIME el ZIP (no subas el ZIP sin descomprimir).
-  2. En github.com/manuelpdb/solucionario, pestaña Code, rama main,
-     pulsa Add file > Upload files. Arrastra todos los archivos de la
-     carpeta SOLUCIONARIO_ROBOMISION_LISTO_GITHUB (NO la carpeta como nivel adicional).
-  3. Confirma con "Commit changes".
-  4. En Settings > Pages verifica: Deploy from a branch / main / /(root).
-     Espera a que la publicación termine, revisa Actions o el mensaje de Pages.
-  5. Abre https://manuelpdb.github.io/solucionario/
-     Alternativa: https://manuelpdb.github.io/solucionario/docentes.html
-  6. Contraseña: CEPDEJEREZ
+Sitio: https://manuelpdb.github.io/solucionario/
+Acceso: misma contraseña docente que usabas anteriormente (no se incluye aquí).
 
-IMPORTANTE:
-  - Debes ver index.html y docentes-datos.enc.json al mismo nivel que README,
-    directamente en la primera pantalla del repositorio.
-  - Si la URL SIGUE MOSTRANDO un error 404, GitHub Pages no está sirviendo
-    esa dirección o no ha terminado el despliegue. El ZIP por sí solo NO
-    puede activar GitHub Pages. Comprueba Settings > Pages y Actions.
-  - Si se ve el formulario, pero la contraseña no carga los contenidos,
-    comprueba que docentes-datos.enc.json esté publicado en la misma carpeta.
-  - Se precisa un navegador reciente con HTTPS para el descifrado.
-  - El código y las soluciones son orientativos y NO están todos verificados.
-  - No subas los ZIP antiguos con las soluciones sin cifrar.
+NOVEDAD: tercera pestaña «Proyectos STEAM» con los 12 proyectos de la V61,
+36 propuestas Bronce/Plata/PRO, guías paso a paso y visor oficial de MakeCode.
 
-
-CORRECCIÓN DEL VISOR DE BLOQUES (8 NOVIEMBRE 2026)
-----------------------------------------------------
-Las imágenes SVG creadas por MakeCode ahora se adaptan al ancho de pantalla
-(máximo 760 píxeles en escritorio), manteniendo sus proporciones y sin
-recortar ninguna parte del programa. Solo se ha cambiado el estilo visual;
-las 204 propuestas y la contraseña CEPDEJEREZ siguen intactas.
-Para ver la versión nueva, sustituye los archivos de la raíz del repositorio
-'solucionario' y fuerza la recarga con Ctrl + F5.
+LIMITACIONES IMPORTANTES:
+- Programas orientativos; sintaxis comprobada, NO compilación online validada
+  individualmente en MakeCode ni pruebas físicas con los kits.
+- Los bloques se generan online al pulsar «Ver bloques», por el servicio
+  oficial de Microsoft MakeCode. Pueden no renderizar con algunas versiones.
+- Bomba/relé: polaridad y fuente externa; no confiar el paro físico al botón.
+- Sensor de presión I2C: el PRO es diagnóstico preparatorio, NO lectura real
+  hasta determinar chip y extensión. No se presenta como funcional.
+- No publicar un ZIP descomprimido dentro de una subcarpeta.
